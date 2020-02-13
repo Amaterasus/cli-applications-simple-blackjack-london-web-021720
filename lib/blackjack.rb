@@ -49,7 +49,6 @@ def hit?(card_total)
   while choice != "h" && choice != "s" do
     invalid_command
     prompt_user
-    display_card_total(card_total)
     choice = get_user_input
   end
   if choice == "h"
@@ -72,6 +71,7 @@ def runner
   welcome
   card_total = initial_round
   while card_total <= 21 do
+    display_card_total(card_total)
     card_total = hit?(card_total)
   end
   end_game(card_total)
