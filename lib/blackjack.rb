@@ -46,7 +46,7 @@ def hit?(card_total)
   prompt_user
   choice = get_user_input
   
-  while choice != "h" || choice != "s" do
+  while choice != "h" && choice != "s" do
     invalid_command
     prompt_user
     choice = get_user_input
